@@ -21878,7 +21878,6 @@ export class WebInspectorElement extends LitElement {
       core.runtimeEntitlements?.status === "ready"
         ? core.runtimeEntitlements.entitlement
         : undefined;
-    const license = core.licenseStatus;
     return {
       ...base,
       runtimeVersion: core.runtimeVersion,
@@ -21896,7 +21895,6 @@ export class WebInspectorElement extends LitElement {
           : entitlement
             ? "self-hosted"
             : undefined,
-      license: license === "unknown" ? undefined : license,
     };
   }
 

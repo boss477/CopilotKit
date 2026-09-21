@@ -10,7 +10,6 @@ export interface NotificationConditions {
   intelligence?: "enabled" | "disabled";
   deployment?: "managed" | "self-hosted";
   plan?: string;
-  license?: "valid" | "none" | "expired" | "expiring" | "invalid";
 }
 export interface CohortNotification {
   id: string;
@@ -59,7 +58,6 @@ const conditionValues: Record<string, readonly string[]> = {
   framework: ["react", "vue", "angular"],
   intelligence: ["enabled", "disabled"],
   deployment: ["managed", "self-hosted"],
-  license: ["valid", "none", "expired", "expiring", "invalid"],
 };
 function record(value: unknown): value is Record<string, unknown> {
   return value !== null && typeof value === "object" && !Array.isArray(value);

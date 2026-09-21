@@ -88,7 +88,6 @@ test.each([
   {
     plan: "pro",
     deployment: "managed" as const,
-    license: "valid" as const,
     runtimeVersion: "^1.70.0",
   },
 ])("required metadata must be confirmed: %j", (conditions) => {
